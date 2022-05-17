@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './categories.dart';
+import './categories_data.dart';
 import './category_item.dart';
 
 //This is the first screen appearing when opening an app
