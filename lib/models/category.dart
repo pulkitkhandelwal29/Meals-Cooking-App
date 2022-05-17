@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Tells what categories want
 class Category {
   final String id;
   final String title;

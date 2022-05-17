@@ -1,17 +1,34 @@
 import 'package:flutter/material.dart';
 
+import './categories.dart';
+import './category_item.dart';
+
+//This is the first screen appearing when opening an app
+
 class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //creating gridview
-    return GridView(
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
-        childAspectRatio: 3 / 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
+    //creating gridview and wrapping into scafold as it is now the main screen
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Meals Cooking'),
       ),
-      children: [],
+      body: GridView(
+        children: DUMMY_CATEGORIES
+            .map(
+              (catData) => CategoryItem(
+                catData.title,
+                catData.color,
+              ),
+            )
+            .toList(),
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+      ),
     );
   }
 }
