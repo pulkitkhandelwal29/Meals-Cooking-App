@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 //recipes of the category when tapped
 class CategoryMealsScreen extends StatelessWidget {
+  static const routeName = '/category-meals';
   // commented after named routers was implemented
   // final String categoryId;
   // final String categoryTitle;

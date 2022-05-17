@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       ),
       //Loads the widget on the first screen of app
       home: CategoriesScreen(),
-      routes: {'/category-meals': (ctx) => CategoryMealsScreen()},
+      routes: {CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen()},
     );
   }
 }
